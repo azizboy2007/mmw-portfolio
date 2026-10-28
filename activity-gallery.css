@@ -1,0 +1,246 @@
+/* Scoped styles for activities that have multiple images.
+   Existing portfolio sections and single-image activities remain untouched. */
+.activity-frame.has-gallery {
+  width: 100%;
+  max-width: 420px;
+  justify-self: center;
+}
+.activity-frame.has-gallery .activity-image {
+  height: auto;
+  aspect-ratio: 3 / 4;
+  background: #0d0915;
+}
+.activity-frame.has-gallery .content-image {
+  object-fit: contain;
+}
+.exam-gallery-nav {
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  left: 15px;
+  right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+.exam-gallery-arrow {
+  appearance: none;
+  pointer-events: auto;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 52px;
+  border: 1px solid rgba(184, 138, 255, .42);
+  border-radius: 13px;
+  color: #f7f4fc;
+  background: rgba(9, 6, 15, .78);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, .3);
+  font: 600 34px/1 "Inter", Arial, sans-serif;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: background .18s ease, border-color .18s ease, transform .18s ease;
+}
+.exam-gallery-arrow:hover {
+  border-color: rgba(184, 138, 255, .8);
+  background: rgba(55, 30, 82, .95);
+}
+.exam-gallery-arrow:active { transform: scale(.94); }
+.exam-gallery-arrow:focus-visible { outline: 2px solid #b88aff; outline-offset: 3px; }
+.exam-gallery-counter {
+  position: absolute;
+  z-index: 5;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  padding: 7px 13px;
+  border: 1px solid rgba(184, 138, 255, .28);
+  border-radius: 8px;
+  background: rgba(9, 6, 15, .82);
+  color: #f7f4fc;
+  font: 700 12px/1.4 "Inter", Arial, sans-serif;
+  letter-spacing: 1.1px;
+  white-space: nowrap;
+  pointer-events: none;
+}
+@media (max-width: 650px) {
+  .exam-gallery-nav { left: 12px; right: 12px; }
+  .exam-gallery-arrow { width: 35px; height: 44px; border-radius: 10px; font-size: 29px; }
+  .exam-gallery-counter { bottom: 16px; font-size: 11px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .exam-gallery-arrow { transition: none; }
+}
+
+
+/* SINGLE-IMAGE ACTIVITIES: size the border to the actual image ratio.
+   The old global 269px/344px height and object-fit:cover cropped photos.
+   Only cards without a multi-page gallery are affected. */
+.activity-frame:not(.has-gallery) .activity-image {
+  height: auto;
+  min-height: 0;
+  display: grid;
+  place-items: center;
+}
+.activity-frame:not(.has-gallery) .activity-image > .content-image {
+  position: relative;
+  inset: auto;
+  grid-area: 1 / 1;
+  width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+}
+/* Keep the fallback behind the photo during loading, and visible on errors. */
+.activity-frame:not(.has-gallery) .activity-image > [data-placeholder] {
+  grid-area: 1 / 1;
+  min-height: 269px;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+/* Academic periods: preserve the existing cards, spacing and violet theme. */
+.activities-section .term-heading {
+  margin-top: 48px;
+  padding-top: 74px;
+  border-top: 1px solid rgba(var(--violet-rgb), .2);
+}
+.activities-section .term-cards {
+  min-width: 0;
+}
+.activity-card.is-pending-asset .activity-image-placeholder {
+  max-width: 100%;
+  padding: 20px;
+  color: var(--violet);
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 800;
+  font-size: clamp(13px, 1.7vw, 17px);
+  line-height: 1.7;
+  letter-spacing: .04em;
+  text-transform: none;
+  text-align: center;
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+}
+.activity-card.is-text-only,
+.activity-card.is-text-only:nth-child(even) {
+  grid-template-columns: minmax(0, 1fr);
+  min-height: 280px;
+}
+.activity-card.is-text-only .activity-content {
+  max-width: 720px;
+}
+@media (max-width:650px) {
+  .activities-section .term-heading {
+    margin-top: 18px;
+    padding-top: 56px;
+  }
+  .activity-card.is-text-only,
+  .activity-card.is-text-only:nth-child(even) {
+    min-height: 240px;
+  }
+}
+
+
+/* TAKEAWAYS — a readable reflection card after the Final academic period.
+   Selectors are scoped so existing activity and academic layouts are unchanged. */
+.takeaways-section {
+  padding-top: 12px;
+  padding-bottom: 100px;
+}
+.takeaways-heading {
+  max-width: 800px;
+  margin-bottom: 28px;
+}
+.takeaways-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--violet);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 3.2px;
+  text-transform: uppercase;
+}
+.takeaways-label::before {
+  content: "";
+  flex: 0 0 32px;
+  width: 32px;
+  height: 2px;
+  background: var(--violet);
+}
+.takeaways-title {
+  margin-top: 17px;
+  font-family: "Archivo Black", "Arial Black", sans-serif;
+  font-size: clamp(42px, 7vw, 86px);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -.055em;
+  overflow-wrap: anywhere;
+}
+.takeaways-subtitle {
+  margin-top: 15px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.65;
+}
+.takeaways-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: clamp(26px, 5.5vw, 65px);
+  border: 1px solid rgba(var(--violet-rgb), .32);
+  border-radius: 30px 12px 30px 12px;
+  background: radial-gradient(ellipse at 92% 0%, rgba(154,91,255,.095), transparent 55%),
+              linear-gradient(145deg, rgba(25,16,38,.98), rgba(12,8,20,.98));
+  box-shadow: 0 24px 76px rgba(0,0,0,.26);
+}
+.takeaways-card::before {
+  content: "";
+  position: absolute;
+  left: 50px;
+  right: 50px;
+  top: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(220,199,255,.64), transparent);
+}
+.takeaways-body {
+  max-width: 72ch;
+  margin-inline: auto;
+}
+.takeaways-paragraph {
+  color: #e9e3f1;
+  font-size: clamp(15.5px, 1.55vw, 17px);
+  font-weight: 400;
+  line-height: 1.9;
+  letter-spacing: .005em;
+  overflow-wrap: break-word;
+}
+.takeaways-paragraph + .takeaways-paragraph {
+  margin-top: 24px;
+}
+.takeaways-closing {
+  margin-top: 35px !important;
+  padding: 17px 0 17px 22px;
+  border-left: 3px solid var(--violet);
+  color: var(--white);
+  font-weight: 600;
+}
+@media (max-width: 650px) {
+  .takeaways-section {padding-top: 0; padding-bottom: 65px}
+  .takeaways-heading {margin-bottom: 24px}
+  .takeaways-label {font-size: 10px; letter-spacing: 2.6px}
+  .takeaways-title {font-size: clamp(39px, 10.5vw, 56px)}
+  .takeaways-subtitle {font-size: 14px}
+  .takeaways-card {padding: 28px 23px; border-radius: 25px 10px 25px 10px}
+  .takeaways-paragraph {font-size: 15.5px; line-height: 1.85}
+  .takeaways-paragraph + .takeaways-paragraph {margin-top: 23px}
+  .takeaways-closing {padding-left: 15px; margin-top: 28px !important}
+}
+@media (max-width: 350px) {
+  .takeaways-card {padding: 24px 17px}
+  .takeaways-paragraph {font-size: 15px}
+}

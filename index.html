@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" >
+<meta name="theme-color" content="#09060f" >
+<title>MMW | Abdul, Abdul Aziz P.</title>
+<meta name="description" content="Mathematics in the Modern World — student e-portfolio.">
+<link rel="preconnect" href="https://fonts.googleapis.com" >
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" >
+<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body aria-busy="true">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<noscript><p class="noscript-message">Please enable JavaScript to view this JSON-powered portfolio.</p></noscript>
+<div id="load-state" class="load-state" role="status">
+  <progress></progress>
+  <pre id="load-error" role="alert" hidden></pre>
+  <a id="data-link" hidden></a>
+  <input id="local-data" type="file" accept="application/json,.json" aria-labelledby="data-link" hidden>
+</div>
+<div id="portfolio" hidden>
+  <header class="navbar">
+    <div class="brand"><span data-text="header.brand"></span><span class="brand-accent" data-text="header.brandAccent"></span></div>
+    <div class="status"><span class="status-dot" aria-hidden="true"></span><span data-text="header.status"></span></div>
+  </header>
+  <main id="main-content">
+    <section class="container introduction">
+      <div class="intro-content reveal">
+        <div class="eyebrow" data-text="introduction.label"></div>
+        <h1 class="intro-title"><span data-text="introduction.title"></span><span class="title-accent" data-text="introduction.titleAccent"></span></h1>
+        <p class="intro-description" data-text="introduction.description"></p>
+        <p class="intro-note" data-text="introduction.note"></p>
+        <a class="intro-cta" href="#activities-section"><span data-text="introduction.cta"></span><span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="intro-image-area reveal">
+        <div class="intro-glow" aria-hidden="true"></div>
+        <div class="intro-ring" aria-hidden="true"></div>
+        <span class="math-orbit orbit-one" aria-hidden="true">π</span>
+        <span class="math-orbit orbit-two" aria-hidden="true">∞</span>
+        <span class="math-orbit orbit-three" aria-hidden="true">x²</span>
+        <div class="media-frame hero-frame"><div id="introduction-image" class="floating-image"><div class="image-placeholder" data-placeholder></div></div></div>
+      </div>
+    </section>
+    <div id="academic-context" class="container academic-context" hidden>
+      <section id="profile-card" class="academic-card profile-card reveal" aria-labelledby="profile-name" hidden>
+        <div class="profile-heading">
+          <p class="card-kicker" data-text="profile.label"></p>
+          <span class="course-badge" data-text="profile.badge"></span>
+        </div>
+        <div class="profile-identity">
+          <p class="field-label" data-text="profile.nameLabel"></p>
+          <h2 id="profile-name" class="profile-name" data-text="profile.name"></h2>
+        </div>
+        <dl id="profile-details" class="profile-details"></dl>
+      </section>
+      <section id="instructor-card" class="academic-card instructor-card reveal" aria-labelledby="instructor-name" hidden>
+        <div class="media-frame instructor-frame">
+          <div id="instructor-image" class="instructor-image"><div class="image-placeholder" data-placeholder></div></div>
+        </div>
+        <div class="instructor-caption">
+          <p class="card-kicker" data-text="instructor.label"></p>
+          <h2 id="instructor-name" class="instructor-name" data-text="instructor.name"></h2>
+          <p class="instructor-course" data-text="instructor.course"></p>
+        </div>
+      </section>
+    </div>
+    <section id="activities-section" class="container activities-section">
+      <div class="activities-heading reveal">
+        <div class="activities-label" data-text="activities.label"></div>
+        <h2 class="activities-title" data-text="activities.title"></h2>
+        <p class="activities-description" data-text="activities.description"></p>
+      </div>
+    </section>
+  </main>
+  <button id="motion-toggle" class="motion-toggle" type="button" aria-pressed="false" hidden><span class="motion-indicator" aria-hidden="true"></span><span id="motion-label"></span></button>
+  <footer class="container footer"><div data-text="footer.text"></div><div><strong data-text="footer.highlight"></strong></div></footer>
+</div>
+<template id="activity-template">
+  <article class="activity-card reveal">
+    <div class="activity-content">
+      <div class="activity-number" data-text="number"></div>
+      <h2 class="activity-title" data-text="title"></h2>
+      <p class="activity-text" data-text="description"></p>
+    </div>
+    <div class="media-frame activity-frame"><div class="activity-image"><div class="activity-image-placeholder" data-placeholder></div></div></div>
+  </article>
+</template>
+<div class="background" aria-hidden="true"><div class="math-grid"></div><div id="math-symbols" class="math-symbols"></div></div>
+<script src="app.js" defer></script>
+</body>
+</html>

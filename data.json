@@ -1,0 +1,99 @@
+{
+  "site": {
+    "title": "MMW | Abdul, Abdul Aziz P.",
+    "language": "en",
+    "description": "Mathematics in the Modern World — the e-portfolio of Abdul, Abdul Aziz P., BSIT 1-C at Northeastern College."
+  },
+  "header": {
+    "brand": "ABDUL,",
+    "brandAccent": " ABDUL AZIZ P.",
+    "status": "MMW · E-PORTFOLIO"
+  },
+  "introduction": {
+    "label": "NUMBERS. PATTERNS. POSSIBILITIES.",
+    "title": "MM",
+    "titleAccent": "W",
+    "description": "MATHEMATICS IN THE MODERN WORLD",
+    "img": "images/abdulpic.jpg",
+    "imgAlt": "Abdul Aziz, student portfolio portrait",
+    "imgPlaceholder": "IMAGE",
+    "cta": "Explore my activities",
+    "note": "A different way to see the everyday."
+  },
+  "profile": {
+    "label": "STUDENT DETAILS",
+    "nameLabel": "Name",
+    "name": "Abdul, Abdul Aziz P.",
+    "badge": "BSIT · 1-C",
+    "details": [
+      {
+        "label": "Course",
+        "value": "Bachelor of Science in Information Technology (BSIT)"
+      },
+      {
+        "label": "Year & Section",
+        "value": "1 C"
+      },
+      {
+        "label": "School",
+        "value": "Northeastern College"
+      }
+    ]
+  },
+  "instructor": null,
+  "activities": {
+    "label": "THE LEARNING COLLECTION",
+    "title": "PRELIMINARY",
+    "description": "Activities, discoveries, and the mathematics behind everyday life.",
+    "items": [
+      {
+        "term": "preliminary",
+        "number": "01",
+        "title": "PATTERNS & SEQUENCES",
+        "description": "Sample activity — Square numbers. The sequence 1, 4, 9, 16, … follows the rule aₙ = n². Each term counts the dots in an n × n square. Replace this example with your own activity and image.",
+        "img": "images/sample-activity.svg",
+        "imgAlt": "Square-number pattern: 1, 4, 9, and 16 dots arranged in one-by-one through four-by-four squares.",
+        "imgPlaceholder": "ACTIVITY 01"
+      }
+    ],
+    "terms": [
+      {
+        "id": "preliminary",
+        "title": "PRELIMINARY",
+        "description": "Activities, discoveries, and the mathematics behind everyday life."
+      }
+    ]
+  },
+  "footer": {
+    "text": "© 2026 · ABDUL, ABDUL AZIZ P.",
+    "highlight": "MMW E-PORTFOLIO"
+  },
+  "takeaways": null,
+  "controls": {
+    "pauseMotion": "Pause motion",
+    "resumeMotion": "Resume motion"
+  },
+  "background": {
+    "enabled": true,
+    "symbols": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "5",
+      "8",
+      "13",
+      "21",
+      "π",
+      "∞",
+      "∑",
+      "√",
+      "φ",
+      "x²",
+      "+",
+      "×",
+      "÷",
+      "="
+    ]
+  }
+}
