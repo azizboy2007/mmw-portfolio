@@ -2,7 +2,7 @@
   "site": {
     "title": "MMW | Abdul, Abdul Aziz P.",
     "language": "en",
-    "description": "Mathematics in the Modern World — the e-portfolio of Abdul, Abdul Aziz P., BSIT 1-C at Northeastern College."
+    "description": "Mathematics in the Modern World — e-portfolio of Abdul, Abdul Aziz P., BSIT 1-C, Northeastern College."
   },
   "header": {
     "brand": "ABDUL,",
@@ -17,7 +17,7 @@
     "img": "images/abdulpic.jpg",
     "imgAlt": "Abdul Aziz, student portfolio portrait",
     "imgPlaceholder": "IMAGE",
-    "cta": "Explore my activities",
+    "cta": "View my portfolio",
     "note": "A different way to see the everyday."
   },
   "profile": {
@@ -42,25 +42,91 @@
   },
   "instructor": null,
   "activities": {
-    "label": "THE LEARNING COLLECTION",
-    "title": "PRELIMINARY",
-    "description": "Activities, discoveries, and the mathematics behind everyday life.",
-    "items": [
-      {
-        "term": "preliminary",
-        "number": "01",
-        "title": "PATTERNS & SEQUENCES",
-        "description": "Sample activity — Square numbers. The sequence 1, 4, 9, 16, … follows the rule aₙ = n². Each term counts the dots in an n × n square. Replace this example with your own activity and image.",
-        "img": "images/sample-activity.svg",
-        "imgAlt": "Square-number pattern: 1, 4, 9, and 16 dots arranged in one-by-one through four-by-four squares.",
-        "imgPlaceholder": "ACTIVITY 01"
-      }
-    ],
+    "label": "MMW PORTFOLIO",
+    "title": "EXAMS",
+    "description": "Academic work",
     "terms": [
       {
-        "id": "preliminary",
-        "title": "PRELIMINARY",
-        "description": "Activities, discoveries, and the mathematics behind everyday life."
+        "id": "exams",
+        "title": "EXAMS",
+        "description": "Prelim · Midterm · Pre-final"
+      },
+      {
+        "id": "activities",
+        "title": "ACTIVITIES",
+        "description": "Activities"
+      }
+    ],
+    "items": [
+      {
+        "term": "exams",
+        "number": "01",
+        "title": "PRELIM EXAM",
+        "description": "Prelim",
+        "img": "images/prelim-page-01.jpg",
+        "imgAlt": "PRELIM EXAM document photo",
+        "imgPlaceholder": "PRELIM EXAM",
+        "images": [
+          "images/prelim-page-01.jpg",
+          "images/prelim-page-02.jpg",
+          "images/prelim-page-03.jpg",
+          "images/prelim-page-04.jpg",
+          "images/prelim-page-05.jpg",
+          "images/prelim-page-06.jpg"
+        ]
+      },
+      {
+        "term": "exams",
+        "number": "02",
+        "title": "MIDTERM EXAM",
+        "description": "Midterm",
+        "img": "images/midterm-page-01.jpg",
+        "imgAlt": "MIDTERM EXAM document photo",
+        "imgPlaceholder": "MIDTERM EXAM",
+        "images": [
+          "images/midterm-page-01.jpg",
+          "images/midterm-page-02.jpg",
+          "images/midterm-page-03.jpg",
+          "images/midterm-page-04.jpg",
+          "images/midterm-page-05.jpg",
+          "images/midterm-page-06.jpg"
+        ]
+      },
+      {
+        "term": "exams",
+        "number": "03",
+        "title": "PRE-FINAL EXAM",
+        "description": "Pre-final",
+        "img": "images/pre-final-page-01.jpg",
+        "imgAlt": "PRE-FINAL EXAM document photo",
+        "imgPlaceholder": "PRE-FINAL EXAM",
+        "images": [
+          "images/pre-final-page-01.jpg",
+          "images/pre-final-page-02.jpg",
+          "images/pre-final-page-03.jpg",
+          "images/pre-final-page-04.jpg",
+          "images/pre-final-page-05.jpg",
+          "images/pre-final-page-06.jpg"
+        ]
+      },
+      {
+        "term": "activities",
+        "number": "04",
+        "title": "ACTIVITIES",
+        "description": "",
+        "img": "images/activities-page-01.jpg",
+        "imgAlt": "ACTIVITIES document photo",
+        "imgPlaceholder": "ACTIVITIES",
+        "images": [
+          "images/activities-page-01.jpg",
+          "images/activities-page-02.jpg",
+          "images/activities-page-03.jpg",
+          "images/activities-page-04.jpg",
+          "images/activities-page-05.jpg",
+          "images/activities-page-06.jpg",
+          "images/activities-page-07.jpg",
+          "images/activities-page-08.jpg"
+        ]
       }
     ]
   },

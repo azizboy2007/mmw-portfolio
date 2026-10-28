@@ -1,0 +1,159 @@
+/* MMW portfolio update — preserves the existing violet and animated math theme. */
+#activities-section .activities-description {
+  display: none;
+}
+#activities-section .term-cards {
+  display: grid;
+  gap: clamp(22px, 4vw, 44px);
+}
+#activities-section .activity-card,
+#activities-section .activity-card:nth-child(even) {
+  grid-template-columns: minmax(0, 1fr);
+  gap: clamp(20px, 3vw, 34px);
+  align-items: stretch;
+  min-height: 0;
+  padding: clamp(22px, 3.5vw, 44px);
+  margin: 0;
+}
+#activities-section .activity-card:nth-child(even) .activity-content,
+#activities-section .activity-card:nth-child(even) .activity-frame {
+  order: initial;
+}
+#activities-section .activity-card .activity-content {
+  display: grid;
+  align-content: center;
+  grid-template-columns: auto minmax(0,1fr) auto;
+  gap: 8px 18px;
+  align-items: center;
+}
+#activities-section .activity-card .activity-number {
+  grid-row: 1 / 3;
+  font-size: clamp(13px, 1.2vw, 17px);
+  letter-spacing: .08em;
+  color: var(--violet);
+}
+#activities-section .activity-card .activity-title {
+  grid-column: 2;
+  font-size: clamp(28px, 4.4vw, 52px);
+  line-height: 1.05;
+}
+#activities-section .activity-card .activity-text {
+  grid-column: 3;
+  grid-row: 1 / 3;
+  margin: 0;
+  align-self: center;
+  border-radius: 100px;
+  padding: 8px 16px;
+  border: 1px solid rgba(169,119,250,.32);
+  background: rgba(169,119,250,.08);
+  color: #e2ceff;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.3;
+}
+#activities-section .activity-card .activity-frame.has-gallery {
+  width: 100%;
+  max-width: 820px;
+  margin-inline: auto;
+  justify-self: center;
+  animation: none;
+}
+#activities-section .activity-card .activity-frame.has-gallery .activity-image {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  height: auto;
+  background: #0c0913;
+  border: 1px solid rgba(177,133,244,.17);
+  border-radius: 20px;
+}
+#activities-section .activity-card .activity-frame.has-gallery .content-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #0d0a13;
+  cursor: zoom-in;
+}
+#activities-section .activity-card[data-number="04"] .activity-text {
+  display: none;
+}
+#activities-section .activity-card[data-number="04"] .activity-title {
+  grid-column: 2 / 4;
+}
+#activities-section .term-heading {
+  margin-top: clamp(40px, 8vw, 105px);
+  padding-top: clamp(42px, 6vw, 70px);
+}
+#activities-section .activity-card:focus-within {
+  border-color: rgba(181,139,254,.45);
+}
+/* Readable full-screen photo viewer; thumbnails remain inside the existing gallery. */
+.mmw-lightbox[hidden] {display: none !important}
+.mmw-lightbox {
+  position: fixed;
+  z-index: 10000;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 55px 14px 60px;
+  background: rgba(5,3,10,.97);
+  backdrop-filter: blur(15px);
+}
+.mmw-lightbox-image {
+  display: block;
+  object-fit: contain;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: calc(100dvh - 130px);
+  border-radius: 10px;
+  box-shadow: 0 24px 80px rgba(0,0,0,.45);
+}
+.mmw-lightbox-close {
+  position: absolute;
+  right: 16px;
+  top: 14px;
+  display: grid;
+  place-items: center;
+  width: 43px;
+  height: 43px;
+  font-size: 28px;
+  color: white;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,.26);
+  background: rgba(34,21,54,.98);
+  cursor: pointer;
+}
+.mmw-lightbox-caption {
+  color: #f0e9fc;
+  font-size: 12px;
+  letter-spacing: .09em;
+  text-align: center;
+  margin-top: 17px;
+}
+@media (max-width: 650px) {
+  #activities-section .activity-card,
+  #activities-section .activity-card:nth-child(even) {
+    padding: 18px 15px 21px;
+    border-radius: 22px 9px 22px 9px;
+  }
+  #activities-section .activity-card .activity-content {
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 5px 12px;
+  }
+  #activities-section .activity-card .activity-number {grid-row: 1 / 3;}
+  #activities-section .activity-card .activity-title {
+    grid-column: 2;
+    font-size: clamp(23px, 7.6vw, 34px);
+  }
+  #activities-section .activity-card .activity-text {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: start;
+    padding: 6px 12px;
+    font-size: 11px;
+  }
+  #activities-section .activity-card[data-number="04"] .activity-title {grid-column:2;}
+  #activities-section .activity-card .activity-frame.has-gallery .activity-image {border-radius: 14px;}
+}
